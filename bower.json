@@ -1,0 +1,32 @@
+{
+  "name": "pyp",
+  "version": "0.0.0",
+  "description": "Pick first occurrence of element based on condition.",
+  "main": "pyp.deploy.js",
+  "support": "pyp.support.js",
+  "authors": [
+    "Richeve S. Bebedor"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "pick",
+    "first",
+    "occurence",
+    "element",
+    "condition",
+    "pyp"
+  ],
+  "homepage": "https://github.com/volkovasystems/pyp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "doubt": "^0.26.0",
+    "pyck": "^0.32.0",
+    "zelf": "^0.11.0"
+  }
+}
