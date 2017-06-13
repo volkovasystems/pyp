@@ -1,6 +1,6 @@
 {
   "name": "pyp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Pick first occurrence of element based on condition.",
   "main": "pyp.js",
   "support": "pyp.support.js",
@@ -23,6 +23,9 @@
     "pyp"
   ],
   "author": "Richeve S. Bebedor",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/pyp/issues"
@@ -30,13 +33,13 @@
   "homepage": "https://github.com/volkovasystems/pyp#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "doubt": "^0.26.0",
-    "pyck": "^0.32.0",
-    "zelf": "^0.11.0"
+    "doubt": "^0.27.0",
+    "pyck": "^0.34.0",
+    "zelf": "^0.12.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
+    "babel-core": "^6.25.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
