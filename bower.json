@@ -1,12 +1,13 @@
 {
   "name": "pyp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Pick first occurrence of element based on condition.",
   "main": "pyp.deploy.js",
   "support": "pyp.support.js",
   "authors": [
     "Richeve S. Bebedor",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -27,7 +28,7 @@
   ],
   "dependencies": {
     "doubt": "^0.27.0",
-    "pyck": "^0.34.0",
+    "pyck": "^0.35.0",
     "zelf": "^0.12.0"
   }
 }
