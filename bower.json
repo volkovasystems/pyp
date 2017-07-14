@@ -1,6 +1,6 @@
 {
   "name": "pyp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Pick first occurrence of element based on condition.",
   "main": "pyp.deploy.js",
   "support": "pyp.support.js",
@@ -27,8 +27,8 @@
     "tests"
   ],
   "dependencies": {
-    "doubt": "^0.27.0",
-    "pyck": "^0.35.0",
+    "doubt": "^0.30.0",
+    "pyck": "^0.36.0",
     "zelf": "^0.12.0"
   }
 }
