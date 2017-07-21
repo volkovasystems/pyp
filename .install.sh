@@ -1,6 +1,5 @@
 yarn add \
 babel-runtime \
-doubt \
 pyck \
 zelf \
 --save && \
@@ -13,7 +12,6 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-doubt \
 pyck \
 zelf \
 --save \

@@ -56,7 +56,6 @@
               	@end-include
               */
 
-var doubt = require("doubt");
 var pyck = require("pyck");
 var zelf = require("zelf");
 
@@ -83,10 +82,6 @@ var pyp = function pyp(list, condition) {
                                          		}
                                          	@end-meta-configuration
                                          */
-
-	if (!doubt(list, AS_ARRAY)) {
-		throw new Error("invalid list");
-	}
 
 	return pyck.bind(zelf(this))(list, condition)[0];
 };

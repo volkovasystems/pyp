@@ -1,34 +1,39 @@
 {
-  "name": "pyp",
-  "version": "0.3.0",
-  "description": "Pick first occurrence of element based on condition.",
-  "main": "pyp.deploy.js",
-  "support": "pyp.support.js",
-  "authors": [
-    "Richeve S. Bebedor",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "pick",
-    "first",
-    "occurence",
-    "element",
-    "condition",
-    "pyp"
-  ],
-  "homepage": "https://github.com/volkovasystems/pyp",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "doubt": "^0.30.0",
-    "pyck": "^0.36.0",
-    "zelf": "^0.12.0"
-  }
+	"name": "pyp",
+	"version": "0.4.0",
+	"description": "Pick first occurrence of element based on condition.",
+	"main": "pyp.deploy.js",
+	"support": "pyp.support.js",
+	"authors": [
+		"Richeve S. Bebedor",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"pick",
+		"first",
+		"occurence",
+		"element",
+		"condition",
+		"pyp"
+	],
+	"homepage": "https://github.com/volkovasystems/pyp",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"resolutions": {
+		"zelf": "^0.13.0",
+		"asea": "^0.16.0",
+		"raze": "^0.34.0",
+		"harden": "^0.23.0"
+	},
+	"dependencies": {
+		"pyck": "^0.37.0",
+		"zelf": "^0.13.0"
+	}
 }

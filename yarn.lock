@@ -127,6 +127,13 @@ asea@^0.14.0:
     babel-runtime "^6.23.0"
     harden "^0.22.0"
 
+asea@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/asea/-/asea-0.16.0.tgz#f4360f825d03eb96c606f3b863df722f6399a2f0"
+  dependencies:
+    babel-runtime "^6.23.0"
+    harden "^0.23.0"
+
 asn1.js@^4.0.0:
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/asn1.js/-/asn1.js-4.9.1.tgz#48ba240b45a9280e94748990ba597d216617fd40"
@@ -861,7 +868,7 @@ chalk@^1.1.0:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chokidar@^1.4.3, chokidar@^1.6.1:
+chokidar@^1.6.1, chokidar@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
   dependencies:
@@ -1481,6 +1488,12 @@ har-validator@~4.2.1:
 harden@^0.22.0:
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/harden/-/harden-0.22.0.tgz#1bcd6cdfd8ce60726009053981b9b37875a2404b"
+  dependencies:
+    babel-runtime "^6.23.0"
+
+harden@^0.23.0:
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/harden/-/harden-0.23.0.tgz#cfe6aaa2f30ad4b27d87fb3fe4a4090fca880b33"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -2205,14 +2218,14 @@ punycode@^1.2.4, punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-pyck@^0.36.0:
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/pyck/-/pyck-0.36.0.tgz#e8ce45b747cd6b6c730e0526368b633b78d0e6eb"
+pyck@^0.37.0:
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/pyck/-/pyck-0.37.0.tgz#f82b04a6ae6f9a05c2194cc571641eec5b90120c"
   dependencies:
     babel-runtime "^6.23.0"
     condev "^0.17.0"
-    raze "^0.33.0"
-    zelf "^0.12.0"
+    raze "^0.34.0"
+    zelf "^0.13.0"
 
 qs@~6.4.0:
   version "6.4.0"
@@ -2242,6 +2255,12 @@ randombytes@^2.0.0, randombytes@^2.0.1:
 raze@^0.33.0:
   version "0.33.0"
   resolved "https://registry.yarnpkg.com/raze/-/raze-0.33.0.tgz#fd399e9104499fbd1061340d92b6cc14dbf0b6d7"
+  dependencies:
+    babel-runtime "^6.23.0"
+
+raze@^0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/raze/-/raze-0.34.0.tgz#12200a3b84d46fdc81bd6ef3b38fdf3e9fff672b"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -2579,8 +2598,8 @@ supports-color@^3.1.0:
     has-flag "^1.0.0"
 
 tapable@^0.2.5, tapable@~0.2.5:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.6.tgz#206be8e188860b514425375e6f1ae89bfb01fd8d"
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.7.tgz#e46c0daacbb2b8a98b9b0cea0f4052105817ed5c"
 
 tar-pack@^3.4.0:
   version "3.4.0"
@@ -2722,12 +2741,12 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-watchpack@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.3.1.tgz#7d8693907b28ce6013e7f3610aa2a1acf07dad87"
+watchpack@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.4.0.tgz#4a1472bcbb952bd0a9bb4036801f954dfb39faac"
   dependencies:
     async "^2.1.2"
-    chokidar "^1.4.3"
+    chokidar "^1.7.0"
     graceful-fs "^4.1.2"
 
 wauker@^0.18.0:
@@ -2747,9 +2766,9 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.2.0.tgz#8b0cae0e1a9fd76bfbf0eab61a8c2ada848c312f"
+webpack@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.3.0.tgz#ce2f9e076566aba91f74887133a883fd7da187bc"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
@@ -2770,7 +2789,7 @@ webpack@^3.2.0:
     supports-color "^3.1.0"
     tapable "~0.2.5"
     uglifyjs-webpack-plugin "^0.4.6"
-    watchpack "^1.3.1"
+    watchpack "^1.4.0"
     webpack-sources "^1.0.1"
     yargs "^6.0.0"
 
@@ -2857,4 +2876,11 @@ zelf@^0.12.0:
   resolved "https://registry.yarnpkg.com/zelf/-/zelf-0.12.0.tgz#39e7cfe074df5710fc156978d1f74c69342102cf"
   dependencies:
     asea "^0.14.0"
+    babel-runtime "^6.23.0"
+
+zelf@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/zelf/-/zelf-0.13.0.tgz#a642981bd3dd08653c61f4513a6f096c5fc1bb7d"
+  dependencies:
+    asea "^0.16.0"
     babel-runtime "^6.23.0"

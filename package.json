@@ -1,49 +1,48 @@
 {
-  "name": "pyp",
-  "version": "0.3.0",
-  "description": "Pick first occurrence of element based on condition.",
-  "main": "pyp.js",
-  "support": "pyp.support.js",
-  "deploy": "pyp.deploy.js",
-  "browser": "pyp.deploy.js",
-  "scripts": {
-    "build": "babel pyp.js --out-file pyp.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha pyp-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/pyp.git"
-  },
-  "keywords": [
-    "pick",
-    "first",
-    "occurence",
-    "element",
-    "condition",
-    "pyp"
-  ],
-  "author": "Richeve S. Bebedor",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/pyp/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/pyp#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "doubt": "^0.30.0",
-    "pyck": "^0.36.0",
-    "zelf": "^0.12.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.2.0"
-  }
+	"name": "pyp",
+	"version": "0.4.0",
+	"description": "Pick first occurrence of element based on condition.",
+	"main": "pyp.js",
+	"support": "pyp.support.js",
+	"deploy": "pyp.deploy.js",
+	"browser": "pyp.deploy.js",
+	"scripts": {
+		"build": "babel pyp.js --out-file pyp.support.js --source-maps && webpack --progress --display-modules",
+		"test": "mocha pyp-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/pyp.git"
+	},
+	"keywords": [
+		"pick",
+		"first",
+		"occurence",
+		"element",
+		"condition",
+		"pyp"
+	],
+	"author": "Richeve S. Bebedor",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/pyp/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/pyp#readme",
+	"dependencies": {
+		"babel-runtime": "^6.23.0",
+		"pyck": "^0.37.0",
+		"zelf": "^0.13.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.3.0"
+	}
 }
