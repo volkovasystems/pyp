@@ -1,14 +1,17 @@
 {
 	"name": "pyp",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "Pick first occurrence of element based on condition.",
 	"main": "pyp.js",
 	"support": "pyp.support.js",
 	"deploy": "pyp.deploy.js",
 	"browser": "pyp.deploy.js",
 	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
 		"build": "babel pyp.js --out-file pyp.support.js --source-maps && webpack --progress --display-modules",
-		"test": "mocha pyp-test.js"
+		"pretest": "npm run clear && npm run build",
+		"test": "node pyp-test.js"
 	},
 	"repository": {
 		"type": "git",
@@ -33,9 +36,9 @@
 	},
 	"homepage": "https://github.com/volkovasystems/pyp#readme",
 	"dependencies": {
-		"babel-runtime": "^6.23.0",
-		"pyck": "^0.37.0",
-		"zelf": "^0.13.0"
+		"babel-runtime": "^6.25.0",
+		"pyck": "^0.38.0",
+		"zelf": "^0.14.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
@@ -43,6 +46,6 @@
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-latest": "^6.24.1",
 		"source-map-loader": "^0.2.1",
-		"webpack": "^3.3.0"
+		"webpack": "^3.5.0"
 	}
 }
