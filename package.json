@@ -46,6 +46,6 @@
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-latest": "^6.24.1",
 		"source-map-loader": "^0.2.1",
-		"webpack": "^3.5.0"
+		"webpack": "^3.5.2"
 	}
 }
