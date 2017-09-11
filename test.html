@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>pyp unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:pyp</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./pyp.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "pyp unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.equal( pyp( [ 1, 2, 3, "hello" ], STRING ), "hello", "should be equal to 'hello'" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.equal( pyp( [ 1, 2, 3 ], 2 ), 2, "should be equal to 2" );
-
-				assert.equal( pyp( [ 1, 2, 3 ], NUMBER ), 1, "should be equal 1" );
-
-				assert.deepEqual( pyp( [ { }, 1, 2, 3, { "hello": "world" } ], OBJECT ), { }, "should be equal to empty object" );
-
-				let date = new Date( );
-				assert.equal( pyp( [ true, date, { }, "hello" ], date ), date, "should be equal to the given condition which is new Date( ) value" );
-
-				let hello = function hello( ){ return "hello" };
-				assert.deepEqual( pyp( [ 1, 2, 3, { }, hello ], FUNCTION ),
-					hello, "should be equal to function hello( ){ return 'hello' }" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
