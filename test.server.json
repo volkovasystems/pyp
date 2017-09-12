@@ -1,16 +1,102 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-11T18:20:37.198Z",
-    "end": "2017-09-11T18:20:37.198Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 7,
+		"tests": 6,
+		"passes": 6,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-12T07:18:08.264Z",
+		"end": "2017-09-12T07:18:08.272Z",
+		"duration": 8
+	},
+	"tests": [
+		{
+			"title": "should be equal to 'hello'",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3, 'hello' ], STRING )` should be equal to 'hello'",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 2",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3 ], 2 )` should be equal to 2",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal 1",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3 ], NUMBER )` should be equal 1",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty object",
+			"fullTitle": "pyp `pyp( [ { }, 1, 2, 3, { 'hello': 'world' } ], OBJECT )` should be equal to empty object",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal instance of Date",
+			"fullTitle": "pyp `pyp( [ true, new Date( ), { }, 'hello' ], new Date( ) )` should be equal instance of Date",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to function hello( ){ return 'hello' }",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3, { }, function hello( ){ return 'hello' } ], FUNCTION )` should be equal to function hello( ){ return 'hello' }",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to 'hello'",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3, 'hello' ], STRING )` should be equal to 'hello'",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 2",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3 ], 2 )` should be equal to 2",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal 1",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3 ], NUMBER )` should be equal 1",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty object",
+			"fullTitle": "pyp `pyp( [ { }, 1, 2, 3, { 'hello': 'world' } ], OBJECT )` should be equal to empty object",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal instance of Date",
+			"fullTitle": "pyp `pyp( [ true, new Date( ), { }, 'hello' ], new Date( ) )` should be equal instance of Date",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to function hello( ){ return 'hello' }",
+			"fullTitle": "pyp `pyp( [ 1, 2, 3, { }, function hello( ){ return 'hello' } ], FUNCTION )` should be equal to function hello( ){ return 'hello' }",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

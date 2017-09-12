@@ -1,0 +1,244 @@
+{
+	"state": {
+		"passed": 6,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-12T07:18:09.587Z",
+	"end": "2017-09-12T07:18:51.258Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "pyp",
+			"duration": 0,
+			"start": "2017-09-12T07:18:50.635Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "pyp",
+			"duration": 436,
+			"start": "2017-09-12T07:18:50.636Z",
+			"end": "2017-09-12T07:18:51.072Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-12T07:18:50.637Z",
+					"end": "2017-09-12T07:18:50.637Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to 'hello'"
+				},
+				{
+					"start": "2017-09-12T07:18:50.774Z",
+					"end": "2017-09-12T07:18:50.775Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to 'hello'"
+				},
+				{
+					"start": "2017-09-12T07:18:50.776Z",
+					"end": "2017-09-12T07:18:50.776Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to 2"
+				},
+				{
+					"start": "2017-09-12T07:18:50.830Z",
+					"end": "2017-09-12T07:18:50.830Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to 2"
+				},
+				{
+					"start": "2017-09-12T07:18:50.830Z",
+					"end": "2017-09-12T07:18:50.830Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal 1"
+				},
+				{
+					"start": "2017-09-12T07:18:50.890Z",
+					"end": "2017-09-12T07:18:50.891Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal 1"
+				},
+				{
+					"start": "2017-09-12T07:18:50.891Z",
+					"end": "2017-09-12T07:18:50.892Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to empty object"
+				},
+				{
+					"start": "2017-09-12T07:18:50.947Z",
+					"end": "2017-09-12T07:18:50.947Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to empty object"
+				},
+				{
+					"start": "2017-09-12T07:18:50.948Z",
+					"end": "2017-09-12T07:18:50.948Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal instance of Date"
+				},
+				{
+					"start": "2017-09-12T07:18:51.000Z",
+					"end": "2017-09-12T07:18:51.000Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal instance of Date"
+				},
+				{
+					"start": "2017-09-12T07:18:51.000Z",
+					"end": "2017-09-12T07:18:51.001Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to function hello( ){ return 'hello' }"
+				},
+				{
+					"start": "2017-09-12T07:18:51.070Z",
+					"end": "2017-09-12T07:18:51.070Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "pyp",
+					"associatedTest": "should be equal to function hello( ){ return 'hello' }"
+				},
+				{
+					"start": "2017-09-12T07:18:51.072Z",
+					"end": "2017-09-12T07:18:51.073Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "pyp"
+				}
+			]
+		},
+		{
+			"name": "`pyp( [ 1, 2, 3, 'hello' ], STRING )`",
+			"duration": 139,
+			"start": "2017-09-12T07:18:50.636Z",
+			"end": "2017-09-12T07:18:50.775Z",
+			"tests": [
+				{
+					"name": "should be equal to 'hello'",
+					"start": "2017-09-12T07:18:50.637Z",
+					"end": "2017-09-12T07:18:50.774Z",
+					"duration": 137,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`pyp( [ 1, 2, 3 ], 2 )`",
+			"duration": 55,
+			"start": "2017-09-12T07:18:50.775Z",
+			"end": "2017-09-12T07:18:50.830Z",
+			"tests": [
+				{
+					"name": "should be equal to 2",
+					"start": "2017-09-12T07:18:50.776Z",
+					"end": "2017-09-12T07:18:50.830Z",
+					"duration": 54,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`pyp( [ 1, 2, 3 ], NUMBER )`",
+			"duration": 61,
+			"start": "2017-09-12T07:18:50.830Z",
+			"end": "2017-09-12T07:18:50.891Z",
+			"tests": [
+				{
+					"name": "should be equal 1",
+					"start": "2017-09-12T07:18:50.830Z",
+					"end": "2017-09-12T07:18:50.890Z",
+					"duration": 60,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`pyp( [ { }, 1, 2, 3, { 'hello': 'world' } ], OBJECT )`",
+			"duration": 56,
+			"start": "2017-09-12T07:18:50.891Z",
+			"end": "2017-09-12T07:18:50.947Z",
+			"tests": [
+				{
+					"name": "should be equal to empty object",
+					"start": "2017-09-12T07:18:50.891Z",
+					"end": "2017-09-12T07:18:50.947Z",
+					"duration": 56,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`pyp( [ true, new Date( ), { }, 'hello' ], new Date( ) )`",
+			"duration": 53,
+			"start": "2017-09-12T07:18:50.947Z",
+			"end": "2017-09-12T07:18:51.000Z",
+			"tests": [
+				{
+					"name": "should be equal instance of Date",
+					"start": "2017-09-12T07:18:50.948Z",
+					"end": "2017-09-12T07:18:51.000Z",
+					"duration": 52,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`pyp( [ 1, 2, 3, { }, function hello( ){ return 'hello' } ], FUNCTION )`",
+			"duration": 72,
+			"start": "2017-09-12T07:18:51.000Z",
+			"end": "2017-09-12T07:18:51.072Z",
+			"tests": [
+				{
+					"name": "should be equal to function hello( ){ return 'hello' }",
+					"start": "2017-09-12T07:18:51.000Z",
+					"end": "2017-09-12T07:18:51.070Z",
+					"duration": 70,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const pyp = require( "./pyp.js" );
@@ -63,11 +63,49 @@ const pyp = require( "./pyp.js" );
 
 
 //: @server:
-
 describe( "pyp", ( ) => {
 
-} );
+	describe( "`pyp( [ 1, 2, 3, 'hello' ], STRING )`", ( ) => {
+		it( "should be equal to 'hello'", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3, "hello" ], STRING ), "hello" );
+		} );
+	} );
 
+	describe( "`pyp( [ 1, 2, 3 ], 2 )`", ( ) => {
+		it( "should be equal to 2", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3 ], 2 ), 2 );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3 ], NUMBER )`", ( ) => {
+		it( "should be equal 1", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3 ], NUMBER ), 1 );
+		} );
+	} );
+
+	describe( "`pyp( [ { }, 1, 2, 3, { 'hello': 'world' } ], OBJECT )`", ( ) => {
+		it( "should be equal to empty object", ( ) => {
+			assert.deepEqual( pyp( [ { }, 1, 2, 3, { "hello": "world" } ], OBJECT ), { } );
+		} );
+	} );
+
+	describe( "`pyp( [ true, new Date( ), { }, 'hello' ], new Date( ) )`", ( ) => {
+		it( "should be equal instance of Date", ( ) => {
+			let date = new Date( );
+
+			assert.equal( pyp( [ true, date, { }, "hello" ], date ), date );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3, { }, function hello( ){ return 'hello' } ], FUNCTION )`", ( ) => {
+		it( "should be equal to function hello( ){ return 'hello' }", ( ) => {
+			let hello = function hello( ){ return "hello" };
+
+			assert.deepEqual( pyp( [ 1, 2, 3, { }, hello ], FUNCTION ), hello );
+		} );
+	} );
+
+} );
 //: @end-server
 
 
