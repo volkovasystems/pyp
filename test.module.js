@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const pyp = require( "./pyp.js" );
@@ -67,27 +67,203 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "pyp", ( ) => {
 
-} );
+	describe( "`pyp( [ 1, 2, 3, 'hello' ], STRING )`", ( ) => {
+		it( "should be equal to 'hello'", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3, "hello" ], STRING ), "hello" );
+		} );
+	} );
 
+	describe( "`pyp( [ 1, 2, 3 ], 2 )`", ( ) => {
+		it( "should be equal to 2", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3 ], 2 ), 2 );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3 ], NUMBER )`", ( ) => {
+		it( "should be equal 1", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3 ], NUMBER ), 1 );
+		} );
+	} );
+
+	describe( "`pyp( [ { }, 1, 2, 3, { 'hello': 'world' } ], OBJECT )`", ( ) => {
+		it( "should be equal to empty object", ( ) => {
+			assert.deepEqual( pyp( [ { }, 1, 2, 3, { "hello": "world" } ], OBJECT ), { } );
+		} );
+	} );
+
+	describe( "`pyp( [ true, new Date( ), { }, 'hello' ], new Date( ) )`", ( ) => {
+		it( "should be equal instance of Date", ( ) => {
+			let date = new Date( );
+
+			assert.equal( pyp( [ true, date, { }, "hello" ], date ), date );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3, { }, function hello( ){ return 'hello' } ], FUNCTION )`", ( ) => {
+		it( "should be equal to function hello( ){ return 'hello' }", ( ) => {
+			let hello = function hello( ){ return "hello" };
+
+			assert.deepEqual( pyp( [ 1, 2, 3, { }, hello ], FUNCTION ), hello );
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "pyp", ( ) => {
 
-} );
+	describe( "`pyp( [ 1, 2, 3, 'hello' ], STRING )`", ( ) => {
+		it( "should be equal to 'hello'", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3, "hello" ], STRING ), "hello" );
+		} );
+	} );
 
+	describe( "`pyp( [ 1, 2, 3 ], 2 )`", ( ) => {
+		it( "should be equal to 2", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3 ], 2 ), 2 );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3 ], NUMBER )`", ( ) => {
+		it( "should be equal 1", ( ) => {
+			assert.equal( pyp( [ 1, 2, 3 ], NUMBER ), 1 );
+		} );
+	} );
+
+	describe( "`pyp( [ { }, 1, 2, 3, { 'hello': 'world' } ], OBJECT )`", ( ) => {
+		it( "should be equal to empty object", ( ) => {
+			assert.deepEqual( pyp( [ { }, 1, 2, 3, { "hello": "world" } ], OBJECT ), { } );
+		} );
+	} );
+
+	describe( "`pyp( [ true, new Date( ), { }, 'hello' ], new Date( ) )`", ( ) => {
+		it( "should be equal instance of Date", ( ) => {
+			let date = new Date( );
+
+			assert.equal( pyp( [ true, date, { }, "hello" ], date ), date );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3, { }, function hello( ){ return 'hello' } ], FUNCTION )`", ( ) => {
+		it( "should be equal to function hello( ){ return 'hello' }", ( ) => {
+			let hello = function hello( ){ return "hello" };
+
+			assert.deepEqual( pyp( [ 1, 2, 3, { }, hello ], FUNCTION ), hello );
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "pyp", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`pyp( [ 1, 2, 3, 'hello' ], STRING )`", ( ) => {
+		it( "should be equal to 'hello'", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return pyp( [ 1, 2, 3, "hello" ], STRING );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, "hello" );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3 ], 2 )`", ( ) => {
+		it( "should be equal to 2", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return pyp( [ 1, 2, 3 ], 2 );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, 2 );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3 ], NUMBER )`", ( ) => {
+		it( "should be equal 1", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return pyp( [ 1, 2, 3 ], NUMBER );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, 1 );
+		} );
+	} );
+
+	describe( "`pyp( [ { }, 1, 2, 3, { 'hello': 'world' } ], OBJECT )`", ( ) => {
+		it( "should be equal to empty object", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( pyp( [ { }, 1, 2, 3, { "hello": "world" } ], OBJECT ) );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), { } );
+		} );
+	} );
+
+	describe( "`pyp( [ true, new Date( ), { }, 'hello' ], new Date( ) )`", ( ) => {
+		it( "should be equal instance of Date", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let date = new Date( );
+
+					return pyp( [ true, date, { }, "hello" ], date ) == date;
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+		} );
+	} );
+
+	describe( "`pyp( [ 1, 2, 3, { }, function hello( ){ return 'hello' } ], FUNCTION )`", ( ) => {
+		it( "should be equal to function hello( ){ return 'hello' }", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let hello = function hello( ){ return "hello" };
+
+					return pyp( [ 1, 2, 3, { }, hello ], FUNCTION ) === hello;
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( result, true );
+		} );
+	} );
+
+} );
 //: @end-bridge
